@@ -1,0 +1,33 @@
+<head>
+    <title>edit page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+    <h1>welcome to edit page</h1>
+    <form action="/updatedata" method="post">
+        <table border="1px">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="username" value="{{t[0]}}"></td>
+            </tr>
+            <tr>
+                <td>city</td>
+                <td><input type="text" name="usercity" value="{{t[1]}}"></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="email" name="useremail" value="{{t[2]}}"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="userpassword" value="{{t[3]}}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>

@@ -1,0 +1,32 @@
+<head>
+    <title>details page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+    <h1><a href="/register">register page</a></h1>
+    <h1><a href="/">home page</a></h1>
+    <h1><a href="/log">login page</a></h1>
+    <table border="1px">
+        <tr>
+            <td>Name</td>
+            <td>City</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td colspan="2">Actions</td>
+        </tr>
+        {% for i in ulist %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td><a href="/edit?email={{i[2]}}">edit</a></td>
+            <td><a href="/delete?email={{i[2]}}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+   
+    <h1>{{i}}</h1>
+    
+</body>
